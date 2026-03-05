@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rock Paper Scissor</title>
+
+<style>
+body{
+font-family:Arial;
+text-align:center;
+background:#e3f2fd;
+padding-top:80px;
+}
+
+.container{
+background:white;
+width:350px;
+margin:auto;
+padding:30px;
+border-radius:10px;
+box-shadow:0 0 10px gray;
+}
+
+button{
+padding:12px 20px;
+margin:10px;
+font-size:16px;
+cursor:pointer;
+border:none;
+border-radius:6px;
+}
+
+button:hover{
+background:#90caf9;
+}
+
+.result{
+margin-top:20px;
+font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Rock Paper Scissor</h2>
+
+<form method="POST">
+<button name="choice" value="rock">Rock</button>
+<button name="choice" value="paper">Paper</button>
+<button name="choice" value="scissor">Scissor</button>
+</form>
+
+{% if result %}
+
+<div class="result">
+<p>Your Choice: {{player}}</p>
+<p>Computer: {{computer}}</p>
+<h3>{{result}}</h3>
+</div>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>
